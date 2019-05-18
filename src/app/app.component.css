@@ -1,0 +1,33 @@
+html,body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(255,255,255,0.03);
+  margin: 0px;
+  padding: 0px;
+  background-color: #333;
+  overflow-x: hidden;
+}
+#inputTask {
+  border: 2px solid #222;
+  outline: none;
+  font-size: 14px;
+  width: 300px;
+}
+#taskTotals {
+  height: calc(40vh - 100px);
+  margin: 50px 0px;
+}
+#taskTotals div {
+}
+#taskTotals div:hover {
+  background-color: rgba(0,0,0,0.03);
+  cursor: pointer;
+  user-select: none;
+}
+#outputTask {
+  height: calc(40vh - 50px);
+  margin: 50px 0px 10px 0px;
+  color: green;
+  background-color: rgba(0,0,0,0.1);
+}
+

@@ -1,0 +1,36 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+    Project Pulse
+  </nb-layout-header>
+
+  <nb-layout-column>
+   
+    <!-- TASK CREATION -->
+    <input nbInput fieldSize="large" placeholder="Task Name" id="inputTask" (keyup.enter)="enterPressed($event)"/>
+
+    <!-- TASK TIME TOTALS -->
+    <nb-card size="medium" id="taskTotals">
+
+      <nb-card-header>
+        Task Time Totals
+      </nb-card-header>
+
+      <nb-list>
+        <nb-list-item *ngFor="let t of tasks | keyvalue">
+          {{t.key}} - {{t.value | formatMS}}
+        </nb-list-item>
+      </nb-list>
+      
+    </nb-card>
+
+    <!-- OUTPUT -->
+    <div id="outputTask"></div>
+    
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+    <a href="chrishayes.dev">Chris Hayes</a>
+  </nb-layout-footer>
+
+</nb-layout>
